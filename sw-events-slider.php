@@ -12,7 +12,7 @@
  */
 
 /**
-/* initialize
+/* initialie
 */
 
 if (!defined('WPINC')) {
@@ -65,10 +65,13 @@ class Sw_Events_Slider extends WP_WIDGET {
 
     public function widget($args, $instance)
     {
-        $title = apply_filters('widget_title', $instance['title']) ;
-        echo($args['before_widget']) ;
+		
+		if (isset($instance['title'])) {
+		$title = apply_filters('widget_title', $instance['title']) ;
+		echo($args['before_widget']) ;
+		}
 
-        if (!empty($title)) {
+        if (isset($title)) {
             echo($args['before_title']) . $title  . $args['after_title'] ;
         }
 
