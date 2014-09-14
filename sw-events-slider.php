@@ -45,6 +45,8 @@ function sw_slider_scripts()
 	 */
 	$deps = array('jquery', 'cycle') ;	
 	wp_enqueue_script('sw_slider_js', SW_EVENTS_SLIDER_URL . "/js/sw-events-slider.js", $deps) ;
+
+	wp_enqueue_style('sw-events-slider-style', SW_EVENTS_SLIDER_URL . "/css/sw-events-slideshow.css"  ) ;
 }
 add_action( 'wp_enqueue_scripts', 'sw_slider_scripts' ) ;
 
