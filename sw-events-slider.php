@@ -76,7 +76,8 @@ class Sw_Events_Slider extends WP_WIDGET {
         }
 
         // run code, display output
-        echo __('hello from my widget!', 'sw_events_slider_widget_domain') ;
+		include_once('loops/slideshow.php') ;
+		
     }
 }
 
