@@ -37,8 +37,14 @@ if (!defined("SW_EVENTS_SLIDER_URL")) {
 
 
 function sw_slider_scripts()
-{
-    wp_enqueue_script( 'cycle', '//cdns.cloudflare.com/libs/jquery.cycle/3.0.3/jquery.cycle.min.all.js') ;
+{	
+    wp_enqueue_script( 'cycle', 'http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js') ;
+
+	/**
+	 * define our dependencies and load our primary logic for the slider
+	 */
+	$deps = array('jquery', 'cycle') ;	
+	wp_enqueue_script('sw_slider_js', SW_EVENTS_SLIDER_URL . "/js/sw-events-slider.js", $deps) ;
 }
 add_action( 'wp_enqueue_scripts', 'sw_slider_scripts' ) ;
 

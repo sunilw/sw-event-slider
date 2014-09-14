@@ -11,9 +11,9 @@ $my_query = new WP_Query($args) ;
 
 ?>
 <?php if ($my_query->have_posts()) : ?>
-    <section id="">
+    <section  class="sw-events-slideshow">
         <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-            <article class="">
+            <article class="slide">
                 <h3><?php the_title()  ?></h3>
                 <p><?php  the_excerpt(); ?></p>
                 <div class="featured-image-container">
