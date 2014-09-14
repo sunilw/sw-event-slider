@@ -61,7 +61,7 @@ class Sw_Events_Slider extends WP_WIDGET {
     {
         parent::__construct(
             // base ID
-            'sw_events_slider_widget',
+            'SW Events Slideshow',
             // name
             __('sw_events_slider_widget', 'sw events slider'),
             // description
